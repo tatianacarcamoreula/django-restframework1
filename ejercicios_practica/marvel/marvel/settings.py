@@ -42,7 +42,7 @@ BASE_APPS = [
 
 # Acá van las apps de 3ros que necesitamos agregar
 # para que Django las encuentre.
-THIRD_APPS = []
+THIRD_APPS = ['rest_framework']
 
 # Acá van las apps que creamos nosotros.
 LOCAL_APPS = ['e_commerce']
@@ -93,6 +93,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'marvel.wsgi.application'
 
+# NOTE: Configuración general para DRF.
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
